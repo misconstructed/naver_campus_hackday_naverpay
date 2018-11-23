@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/naverpay_pay_pattern.iml" filepath="$PROJECT_DIR$/naverpay_pay_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web_main.iml" group="web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web_test.iml" group="web" />
+    </modules>
+  </component>
+</project>
