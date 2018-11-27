@@ -85,8 +85,8 @@
 </style>
 <div id="container">
 <div class="topnav">
-    <a class="active" href="/main">Overall</a>
-    <a href="/branch">Branch</a>
+    <a href="/main">Overall</a>
+    <a class="active" href="/branch">Branch</a>
     <a href="">Menu2</a>
     <a href="">Menu3</a>
 
@@ -106,6 +106,7 @@
                     <label>조회할 지점명을 선택하세요 </label>
 
                         <select class="form-control form-control-sm" style="width:20%; margin-right: 10px" name="branch" id="branchSelect">
+                            <option value="default" >가맹점명</option>
                             <th:block th:each="element : ${data}" align="center">
                                 <th:block th:each="data : ${element.branchList}">
                                     <option th:value="${data}", th:id="${data}"
@@ -114,17 +115,24 @@
                             </th:block>
                         </select>
 
-                    <button type="Enter" onclick="search()" >검색</button>
+                    <input type="number" id="year" placeholder="Enter year" name="year">
+                    <input type="number" id="month" placeholder="Enter month" name="month">
+                    <input type="number" id="day" placeholder="Enter day" name="day">
+
+                    <a href="javascript:searchBranch();" class="btn btn-md btn-success" >검색</a>
                 </form>
                 <div style="margin: 10px">
                     <table style="width: 100%; margin-bottom: 10px" id="table"
                            class="table-bordered table-striped table-condensed cf">
                         <thead class="cf" align="center">
                             <tr>
-                                <td width="20%"><h4>
+                                <td width="10%"><h4>
+                                    <b>날짜
+                                </h4></td>
+                                <td width="15%"><h4>
                                     <b>지점명
                                 </h4></td>
-                                <td width="20%"><h4>
+                                <td width="15%"><h4>
                                     <b>제품명
                                 </h4></td>
                                 <td width="15%"><h4>
@@ -141,8 +149,9 @@
                                 </h4></td>
                             </tr>
                         </thead>
-                        <tbody th:each="element : ${data}" align="center">
+                        <tbody th:if="${data} != null" th:each="element : ${data}" align="center">
                             <tr th:each="data : ${element.list}">
+                                <td th:text="${data.date}"><h5>Date</h5></td>
                                 <td th:text="${data.branchName}"><h5>Branch Name</h5></td>
                                 <td th:text="${data.productName}"><h5>Product Name</h5></td>
                                 <td th:text="${data.totalPayment}"><h5>Total payment</h5></td>
@@ -159,30 +168,83 @@
 </bodys>
 
 <script>
-    function search() {
+    function searchBranch() {
         var branchSelect = document.getElementById("branchSelect");
         var branchName = branchSelect.options[branchSelect.selectedIndex].text;
-        //alert(branchName);
+        var year = document.getElementById("year").value;
+        var month = document.getElementById("month").value;
+        var day = document.getElementById("day").value;
 
-        $.ajax({
-            url : "/main",
-            type : "GET",
-            contentType: "application/json",
-            data : {
-                branchName : branchName
-            },
-            success : function (data){
-                //location.reload();
-
-                var result = $('<div />').append(data).find('#table').html();
-                $('#table').innerHTML = result;
-                console.log("after");
-
-            },
-            error : function(data, textStatus, errorThrown) {
-                alert("error");
+        if(year == null) {
+            if(branchName == null) {
+                alert("지점명을 선택하세요");
+                return;
             }
-        });
+            $.ajax({
+                url : "/main",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName
+                },
+                success : function (data){
+                    //location.reload();
+                    var result = $('<div />').append(data).find('#table').html();
+                    $('#table').html(result);
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        } else if(month == null) {
+            if(branchName == null) {
+                alert("지점명을 선택하세요");
+                return;
+            }
+            $.ajax({
+                url : "/main",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName,
+                    year : year
+                },
+                success : function (data){
+                    //location.reload();
+                    var result = $('<div />').append(data).find('#table').html();
+                    $('#table').html(result);
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        } else if(day == null) {
+            if(branchName == null) {
+                alert("지점명을 선택하세요");
+                return;
+            }
+            $.ajax({
+                url : "/main",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName,
+                    year : year,
+                    month : month
+                },
+                success : function (data){
+                    //location.reload();
+                    var result = $('<div />').append(data).find('#table').html();
+                    $('#table').html(result);
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        }
     }
 </script>
 </div>

@@ -61,6 +61,7 @@ public class AnalysisVO {
         this.dateList = dateList;
     }
 
+
     private void makeTotal() {
         int i;
         ReducedDataVO data;

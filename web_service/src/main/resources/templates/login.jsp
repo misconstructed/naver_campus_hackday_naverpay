@@ -5,6 +5,36 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+
+<script>
+    function login() {
+        var id = document.getElementById("id").value;
+        var password = document.getElementById("password").value;
+
+        var data = {
+            "id":id,
+            "password":password
+        };
+
+        $.ajax({
+            url : "/login",
+            type : "POST",
+            contentType: "application/json",
+            data : JSON.stringify(data),
+            success : function (data){
+                if(data.status == "success") {
+                    location.href="/main";
+                } else {
+                    alert("login failed");
+                }
+            },
+            error : function(data, textStatus, errorThrown) {
+
+            }
+        });
+    }
+</script>
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -45,34 +75,5 @@
         <div class="col-md-4" > </div>
     </div>
 </body>
-
-<script>
-    function login() {
-        var id = document.getElementById("id").value;
-        var password = document.getElementById("password").value;
-
-        var data = {
-            "id":id,
-            "password":password
-        };
-
-        $.ajax({
-            url : "/login",
-            type : "POST",
-            contentType: "application/json",
-            data : JSON.stringify(data),
-            success : function (data){
-                if(data.status == "success") {
-                    location.href="/main";
-                } else {
-                    alert("login failed");
-                }
-            },
-            error : function(data, textStatus, errorThrown) {
-
-            }
-        });
-    }
-</script>
 
 </html>

@@ -31,14 +31,28 @@ public interface DataMapper {
             "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\")")
     public boolean insertTotal(ReducedDataVO data) throws Exception;
 
-    @Select("select * from total")
+    @Select("select * from total order by branchName, totalPayment desc")
     public ArrayList<ReducedDataVO> getTotal() throws Exception;
 
-    @Select("select * from total where branchName = \"${branchName}\"")
+    @Select("select * from total where branchName = \"${branchName}\" order by totalPayment desc")
     public ArrayList<ReducedDataVO> getFiltered(@Param("branchName") String branchName) throws Exception;
 
-    @Select("select * from daily")
-    public ArrayList<ReducedDataVO> getDaily() throws Exception;
+    @Select("select * from daily where date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getDaily( @Param("date") String date) throws Exception;
+
+    @Select("select * from daily where branchName = \"${branchName}\" and " +
+            "date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getDailyBranchFiltered(@Param("branchName") String branchName,
+                                                           @Param("date") String date) throws Exception;
+
+    @Select("select * from yearly where date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getYearly(@Param("date") String date) throws Exception;
+
+    @Select("select * from yearly where branchName = \"${branchName}\" and " +
+            "date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getYearlyBranchFiltered(@Param("branchName") String branchName,
+                                                            @Param("date") String date) throws Exception;
+
 
 }
 
