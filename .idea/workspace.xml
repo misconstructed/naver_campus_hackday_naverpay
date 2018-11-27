@@ -7,22 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="531415ff-d42f-4a09-8118-063d301e2edd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/web_service_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/web_service_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/AnalysisVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/ReducedDataVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/ResultVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/UserVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/DataController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/MainWebController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/UserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/service/CsvReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.jsp" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/.idea/libraries/1_common_1_0_0.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/.idea/libraries/animated_vector_drawable_26_1_0.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/.idea/libraries/appcompat_v7_26_1_0.xml" afterPath="" />
@@ -82,17 +66,8 @@
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/layout/checkin.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/layout/content.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/layout/mymap.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/main/java/com/naver_pay/Controller/TestController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/main/java/com/naver_pay/WebApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/test/java/com/naver_pay/WebApplicationTests.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.jsp" afterPath="$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.jsp" afterPath="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.html" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/.idea/vcs.xml" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/.gitignore" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/.gitignore" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/build.gradle" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/build.gradle" />
@@ -113,11 +88,9 @@
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/dimens.xml" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/strings.xml" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/styles.xml" afterPath="$USER_HOME$/AndroidStudioProjects/Jogiyo/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/BranchController.java" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/BranchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java" afterPath="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/find.recents.xml" afterPath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/find.recents.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/other.xml" afterPath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/other.xml" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/window.state.xml" afterPath="$USER_HOME$/Library/Preferences/AndroidStudio2.3/options/window.state.xml" />
@@ -159,31 +132,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="branchUser.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.jsp">
+      <file leaf-file-name="branchUser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="20" lean-forward="false" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+            <state relative-caret-position="-320">
+              <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BranchController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BranchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/BranchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+            <state relative-caret-position="441">
+              <caret line="66" column="90" lean-forward="false" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataMapper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataMapper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="584">
+              <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -201,17 +184,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainUser.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.jsp">
+      <file leaf-file-name="mainUser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="88" column="16" lean-forward="true" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+            <state relative-caret-position="327">
+              <caret line="175" column="20" lean-forward="false" selection-start-line="171" selection-start-column="8" selection-end-line="187" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalysisVO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/AnalysisVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,6 +224,7 @@
     <findStrings>
       <find>datamapper</find>
       <find>product</find>
+      <find>l</find>
       <find>list</find>
     </findStrings>
   </component>
@@ -962,7 +956,6 @@
         <option value="$PROJECT_DIR$/web_service/src/main/resources/static/mapper/testMapper.xml" />
         <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/testMapper.java" />
         <option value="$PROJECT_DIR$/web_service/src/main/resources/static/html/login.jsp" />
-        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/login.jsp" />
         <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/footer.html" />
         <option value="$PROJECT_DIR$/web_service/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/UserVO.java" />
@@ -988,12 +981,13 @@
         <option value="$PROJECT_DIR$/web_service/build.gradle" />
         <option value="$PROJECT_DIR$/web/build.gradle" />
         <option value="$PROJECT_DIR$/web/src/main/java/com/naver_pay/web/controller/DataController.java" />
-        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.html" />
         <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/MainWebController.java" />
-        <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java" />
-        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.html" />
+        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/login.jsp" />
         <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.jsp" />
+        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.html" />
+        <option value="$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.html" />
         <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/BranchController.java" />
+        <option value="$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java" />
       </list>
     </option>
   </component>
@@ -1003,9 +997,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1152" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-1920" />
+    <option name="width" value="1317" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1330,12 +1325,12 @@
       <workItem from="1543074258757" duration="1000" />
       <workItem from="1543074745961" duration="29000" />
       <workItem from="1543126641713" duration="1008000" />
-      <workItem from="1543130861284" duration="66060000" />
+      <workItem from="1543130861284" duration="71659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98180000" />
+    <option name="totallyTimeSpent" value="103779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1347,7 +1342,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1166" height="1050" extended-state="6" />
+    <frame x="-1920" y="0" width="1317" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1366,11 +1361,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2958035" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28699106" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22313204" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30604982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22313204" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2698039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1515,14 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="65" column="42" lean-forward="true" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/DataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1567,35 +1554,6 @@
           <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/AnalysisVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1775,10 +1733,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.jsp">
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/ReducedDataVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="88" column="16" lean-forward="true" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+        <state relative-caret-position="2610">
+          <caret line="174" column="39" lean-forward="true" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/AnalysisVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/mainUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="175" column="20" lean-forward="false" selection-start-line="171" selection-start-column="8" selection-end-line="187" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#1;n#div#0;n#bodys#0;n#div#0;n#html#0;n#!!top" expanded="true" />
@@ -1788,26 +1762,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/VO/ReducedDataVO.java">
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="174" column="39" lean-forward="true" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
+        <state relative-caret-position="375">
+          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.jsp">
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/resources/templates/branchUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="20" lean-forward="false" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="-320">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1824,8 +1790,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/controller/BranchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+        <state relative-caret-position="441">
+          <caret line="66" column="90" lean-forward="false" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_service/src/main/java/com/naver_pay/mapper/DataMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding />
         </state>
       </provider>
