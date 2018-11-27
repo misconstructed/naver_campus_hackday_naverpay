@@ -48,7 +48,7 @@ public class BranchController {
             try {
                 if(year == null) {
                     System.out.println(branchName);
-                    if(branchName == null) {
+                    if(branchName == null || branchName.equals("default")) {
                         ArrayList<ReducedDataVO> list = dataMapper.getTotal();
                         changeDate(list);
                         System.out.println("daily all branch : "+ list.size());
@@ -62,7 +62,7 @@ public class BranchController {
 
                 } else if(month == null) {
                     date = year;
-                    if(branchName == null) {
+                    if(branchName == null || branchName.equals("default")) {
                         ArrayList<ReducedDataVO> list = dataMapper.getYearly(date);
                         System.out.println("yearly "+date+" : "+list.size());
                         analysisVO = new AnalysisVO(list);
@@ -73,9 +73,8 @@ public class BranchController {
                     }
 
                 } else if(day == null) {
-                    /*
                     date = year+"."+month;
-                    if(branchName == null) {
+                    if(branchName == null || branchName.equals("default")) {
                         ArrayList<ReducedDataVO> list = dataMapper.getMonthly(date);
                         System.out.println("monthly "+date+" : "+list.size());
                         analysisVO = new AnalysisVO(list);
@@ -84,10 +83,10 @@ public class BranchController {
                         System.out.println("yearly "+date+" "+branchName+" : "+ list.size());
                         analysisVO = new AnalysisVO(list);
                     }
-                    */
+
                 } else {
                     date = year+"."+month+"."+day;
-                    if(branchName == null) {
+                    if(branchName == null || branchName.equals("default")) {
                         ArrayList<ReducedDataVO> list = dataMapper.getDaily(date);
                         System.out.println("daily "+date+" : "+list.size());
                         analysisVO = new AnalysisVO(list);

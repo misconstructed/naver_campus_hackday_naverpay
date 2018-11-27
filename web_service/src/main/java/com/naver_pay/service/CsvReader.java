@@ -34,7 +34,6 @@ public class CsvReader {
             file = ResourceUtils.getFile("classpath:"+path);
             br  =  new BufferedReader(new InputStreamReader(new FileInputStream(file),"euc-kr"));
 
-            //br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -63,7 +62,7 @@ public class CsvReader {
 
                 reduce(dataVO);
                 dayReduce(dataVO, tmp[0]);
-                //monthReduce(dataVO, tmp[0]);
+                monthReduce(dataVO, tmp[0]);
                 yearReduce(dataVO, tmp[0]);
             }
         } catch (IOException e) {
@@ -103,7 +102,8 @@ public class CsvReader {
 
     private void monthReduce(DataVO data, String date) {
 
-        String[] split = date.split(".");
+        date = date.replace(".", " ");
+        String[] split = date.split(" ");
         String yearString = split[0];
         String monthString = split[1];
         String dateString = yearString+"."+monthString;

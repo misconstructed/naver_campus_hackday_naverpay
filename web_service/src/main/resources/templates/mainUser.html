@@ -12,7 +12,7 @@
 <script>
     function search() {
         var branchSelect = document.getElementById("branchSelect");
-        var branchName = branchSelect.options[branchSelect.selectedIndex].text;
+        var branchName = branchSelect.options[branchSelect.selectedIndex].value;
         //alert(branchName);
 
         $.ajax({
@@ -132,13 +132,14 @@
 
                         <select class="form-control form-control-sm" style="width:20%; margin-right: 10px" name="branch" id="branchSelect">
                             <th:block th:each="element : ${data}" align="center">
+                                <option value="default" >전체 선택</option>
                                 <th:block th:each="data : ${element.branchList}">
-                                    <option th:value="${data}", th:id="${data}"
+                                    <option th:value="${data}" th:id="${data}"
                                             th:text="${data}">branchName</option>
                                 </th:block>
                             </th:block>
                         </select>
-                        <a href="javascript:search();" class="btn btn-md btn-success" >검색</a>
+                        <button type="button" onclick="search()">검색</button>
                 </form>
                 <div style="margin: 10px; padding: 10px">
                     <table style="width: 100%; margin-bottom: 10px" id="table"
@@ -158,10 +159,10 @@
                                     <b>포인트
                                 </h4></td>
                                 <td width="15%"><h4>
-                                    <b>포인트 비율
+                                    <b>포인트 비율 (%) </b>
                                 </h4></td>
                                 <td width="15%"><h4>
-                                    <b>전체 비율
+                                    <b>전체 비율 (%)</b>
                                 </h4></td>
                             </tr>
                         </thead>
@@ -185,11 +186,16 @@
                             <tr>
 
                                 <td ><h5>전체 결제 금액</h5></td>
-                                <td th:text="${element.total}"><h5><b>total payment</b></h5></td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0" th:text="${element.total}"><h5><b>total payment</b></h5></td>
+
                                 <td ><h5>전체 포인트 결제 금액</h5></td>
-                                <td th:text="${element.adTotal}"><h5><b>total ad payment</b></h5></td>
-                                <td ><h5>포인트 사용 비율</h5></td>
-                                <td th:text="${element.adTotal} / ${element.total} * 100"></td>
+                                <td th:if="${element.adTotal} == 0" >-</td>
+                                <td th:unless="${element.adTotal} == 0"th:text="${element.adTotal}"><h5><b>total ad payment</b></h5></td>
+
+                                <td ><h5>포인트 사용 비율 (%)</h5></td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0"th:text="${element.adTotal} / ${element.total} * 100"></td>
                             </tr>
                         </tbody>
                     </table>

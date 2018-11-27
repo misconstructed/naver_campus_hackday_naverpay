@@ -29,7 +29,7 @@ public class MainWebController {
 
     private CsvReader reader;
     private HashMap<String, ReducedDataVO> total;
-    //private HashMap<String, ReducedDataVO> month;
+    private HashMap<String, ReducedDataVO> month;
     private HashMap<String, ReducedDataVO> day;
     private HashMap<String, ReducedDataVO> year;
     private AnalysisVO analysisVO;
@@ -53,7 +53,7 @@ public class MainWebController {
         else if(userVO.getState() == 0) {
             modelAndView = new ModelAndView("mainUser");
             //list = new ArrayList<>();
-            if(branchName == null) {
+            if(branchName == null || branchName.equals("default")) {
                 System.out.println("branch name == null");
 
                 try {
@@ -133,17 +133,18 @@ public class MainWebController {
 
             total = reader.getMap();
             day = reader.getDay();
-            //month = reader.getMonth();
+            month = reader.getMonth();
             year = reader.getYear();
 
             System.out.println("original size : "+ list.size());
             System.out.println("reduced total size : "+total.size());
             System.out.println("reduced year size : "+ year.size());
+            System.out.println("reduced month size : "+ month.size());
             System.out.println("reduced day size : "+ day.size());
 
             //데이터 디비에 저장
             saveData(day, "day");
-            //saveData(month, "month");
+            saveData(month, "month");
             saveData(year, "year");
             saveData(total, "total");
         }

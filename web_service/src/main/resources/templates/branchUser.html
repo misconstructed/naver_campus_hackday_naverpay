@@ -12,7 +12,7 @@
 <script>
     function search() {
         var branchSelect = document.getElementById("branchSelect");
-        var branchName = branchSelect.options[branchSelect.selectedIndex].text;
+        var branchName = branchSelect.options[branchSelect.selectedIndex].value;
         var year = document.getElementById("year").value;
         var month = document.getElementById("month").value;
         var day = document.getElementById("day").value;
@@ -180,7 +180,7 @@
 <div class="topnav">
     <a href="/main">Overall</a>
     <a class="active" href="/branch">Branch</a>
-    <a href="">Menu2</a>
+    <a href="/">Menu2</a>
     <a href="">Menu3</a>
 
     <div class="topnav-right">
@@ -199,6 +199,7 @@
                     <label>조회할 지점명을 선택하세요 </label>
 
                         <select class="form-control form-control-sm" style="width:20%; margin-right: 10px" name="branch" id="branchSelect">
+                            <option value="default">전체 선택</option>
                             <th:block th:each="element : ${data}" align="center">
                                 <th:block th:each="data : ${element.branchList}">
                                     <option th:value="${data}" th:id="${data}" th:text="${data}">branchName</option>
@@ -234,10 +235,10 @@
                                     <b>포인트</b>
                                 </h4></td>
                                 <td width="15%"><h4>
-                                    <b>포인트 비율</b>
+                                    <b>포인트 비율 (%)</b>
                                 </h4></td>
                                 <td width="15%"><h4>
-                                    <b>전체 비율</b>
+                                    <b>전체 비율 (%)</b>
                                 </h4></td>
                             </tr>
                         </thead>
@@ -262,12 +263,18 @@
                             </tr>
                             <tr>
                                 <td ></td>
+
                                 <td ><h5>전체 결제금액</h5></td>
-                                <td th:text="${element.total}">total payment</td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0" th:text="${element.total}">total payment</td>
+
                                 <td ><h5>전체 포인트 구매액</h5></td>
-                                <td th:text="${element.adTotal}"><h5><b>total ad payment</b></h5></td>
-                                <td ><h5>포인트 구매 비율</h5></td>
-                                <td th:text="${element.adTotal} / ${element.total} * 100"><h5><b>total payment</b></h5></td>
+                                <td th:if="${element.adTotal} == 0" >-</td>
+                                <td th:unless="${element.adTotal} == 0"th:text="${element.adTotal}"><h5><b>total ad payment</b></h5></td>
+
+                                <td ><h5>포인트 구매 비율(%)</h5></td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0"th:text="${element.adTotal} / ${element.total} * 100"><h5><b>total payment</b></h5></td>
                             </tr>
                         </tbody>
                     </table>

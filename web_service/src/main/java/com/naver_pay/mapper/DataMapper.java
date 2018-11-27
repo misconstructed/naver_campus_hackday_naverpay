@@ -45,6 +45,14 @@ public interface DataMapper {
     public ArrayList<ReducedDataVO> getDailyBranchFiltered(@Param("branchName") String branchName,
                                                            @Param("date") String date) throws Exception;
 
+    @Select("select * from monthly where date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getMonthly(@Param("date") String date) throws Exception;
+
+    @Select("select * from monthly where branchName = \"${branchName}\" and " +
+            "date = \"${date}\" order by date asc, totalPayment desc")
+    public ArrayList<ReducedDataVO> getMonthlyBranchFiltered(@Param("branchName") String branchName,
+                                                            @Param("date") String date) throws Exception;
+
     @Select("select * from yearly where date = \"${date}\" order by date asc, totalPayment desc")
     public ArrayList<ReducedDataVO> getYearly(@Param("date") String date) throws Exception;
 
