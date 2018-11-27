@@ -2,7 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="demo_main" target="1.8" />
+      <module name="demo_test" target="1.8" />
+      <module name="naverpay_pay_pattern-web_service_main" target="1.8" />
+      <module name="naverpay_pay_pattern-web_service_test" target="1.8" />
       <module name="web_main" target="1.8" />
+      <module name="web_service_main" target="1.8" />
+      <module name="web_service_test" target="1.8" />
       <module name="web_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

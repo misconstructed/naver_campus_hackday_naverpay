@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/naverpay_pay_pattern.iml" filepath="$PROJECT_DIR$/naverpay_pay_pattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web_main.iml" group="web" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web_test.iml" group="web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/naverpay_pay_pattern-web_service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/naverpay_pay_pattern-web_service_main.iml" group="web_service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/naverpay_pay_pattern-web_service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/naverpay_pay_pattern-web_service_test.iml" group="web_service" />
+      <module fileurl="file://$PROJECT_DIR$/web_service/web_service.iml" filepath="$PROJECT_DIR$/web_service/web_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web_service_main.iml" group="web_service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web_service_test.iml" group="web_service" />
     </modules>
   </component>
 </project>

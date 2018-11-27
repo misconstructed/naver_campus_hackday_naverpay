@@ -1,0 +1,71 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : com.naver_pay : web_service-0.0.1-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/demo/build/libs/exploded/web_service-0.0.1-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/demo">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/demo/build/libs/exploded/web_service-0.0.1-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="web_service_main/web/Web Gradle : web_service-0.0.1-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web_service_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/demo/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.13.Final" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.1.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.23" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.7" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.7" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.7" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:2.0.1.Final" />
+          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.2.Final" />
+          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.4.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.11.1" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.25" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.7" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.1" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-starter/1.3.2/cb6de087ae0d34b23ad0671aacdbcc433d84875f/mybatis-spring-boot-starter-1.3.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/2.1.0.RELEASE/d742e26a5432fcef0ef6d04b1e201f5a00390686/spring-boot-starter-jdbc-2.1.0.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.13/28015319e44ff50a8fee655e725fefc4990abeb1/mysql-connector-java-8.0.13.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/2.1.0.RELEASE/997d47ee955f7d8b7e48bf4dde1de1c27bf41e62/spring-boot-starter-thymeleaf-2.1.0.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-autoconfigure/1.3.2/cada00d6bb4e7b8a733b3cd376ad69a307008685/mybatis-spring-boot-autoconfigure-1.3.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.4.6/a77a546f679533837f6c6a75c034b669f3ce6a2f/mybatis-3.4.6.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.3.2/fd9961cd026b1f6998be27c516973dd5366b14ec/mybatis-spring-1.3.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/3.2.0/6c66db1c636ee90beb4c65fe34abd8ba9396bca6/HikariCP-3.2.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/5.1.2.RELEASE/f7c3c6149bc381418dfeedde9a9220f766e231a0/spring-jdbc-5.1.2.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/de7bf0adf13b5e9c4811f95edf18279da193c0c6/thymeleaf-spring5-3.0.11.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-java8time/3.0.1.RELEASE/d23760d1e53cd70c489ef40dc94ee6bd2371cceb/thymeleaf-extras-java8time-3.0.1.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/5.1.2.RELEASE/68fcf8efc7b0134126adf9aa4c5053d10d231b57/spring-tx-5.1.2.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf/3.0.11.RELEASE/628ebb91f520053d4120b7b18bf78ff295d57461/thymeleaf-3.0.11.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.attoparser/attoparser/2.0.5.RELEASE/a93ad36df9560de3a5312c1d14f69d938099fa64/attoparser-2.0.5.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.unbescape/unbescape/1.1.6.RELEASE/7b90360afb2b860e09e8347112800d12c12b2a13/unbescape-1.1.6.RELEASE.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
