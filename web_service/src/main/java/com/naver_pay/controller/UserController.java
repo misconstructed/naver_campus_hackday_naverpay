@@ -49,13 +49,15 @@ public class UserController {
             String name = map.get("name");
             int state = Integer.parseInt(map.get("state"));
 
-            resultVO = new ResultVO("success");
+            resultVO = new ResultVO("success", "회원가입 성공");
 
-            if(userMapper.insertUser(id, password, name, state) == false)
+            if(userMapper.insertUser(id, password, name, state) == false) {
                 resultVO.setStatus("error");
+                resultVO.setMassage("아이디 중복");
+            }
         } catch (Exception e){
             e.printStackTrace();
-            resultVO = new ResultVO("error");
+            resultVO = new ResultVO("error", "회원가입 오류");
         }
 
         return resultVO;
@@ -72,15 +74,17 @@ public class UserController {
             String password = map.get("password");
 
             resultVO = new ResultVO("error");
+            resultVO.setMassage("로그인 실패");
 
             if((userVO = userMapper.selectUser(id, password)) != null) {
                 resultVO.setStatus("success");
+                resultVO.setMassage("로그인 성공");
                 request.getSession().setAttribute("user", userVO);
             }
 
         } catch (Exception e){
             e.printStackTrace();
-            resultVO = new ResultVO("error");
+            resultVO = new ResultVO("error", "로그인 오류");
         }
 
         return resultVO;

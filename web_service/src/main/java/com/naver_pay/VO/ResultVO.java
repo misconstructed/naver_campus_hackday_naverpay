@@ -2,12 +2,17 @@ package com.naver_pay.VO;
 
 public class ResultVO {
     private String status;
-    private Object object;
+    private String massage;
 
     public ResultVO() {}
 
     public ResultVO(String status) {
         this.status = status;
+    }
+
+    public ResultVO(String status, String massage) {
+        this.status = status;
+        this.massage = massage;
     }
 
     public String getStatus() {
@@ -18,19 +23,19 @@ public class ResultVO {
         this.status = status;
     }
 
-    public Object getObject() {
-        return object;
+    public String getMassage() {
+        return massage;
     }
 
-    public void setObject(Object object) {
-        this.object = object;
+    public void setMassage(String massage) {
+        this.massage = massage;
     }
 
     @Override
     public String toString() {
         return "ResultVO{" +
                 "status='" + status + '\'' +
-                ", object=" + object +
+                ", massage='" + massage + '\'' +
                 '}';
     }
 }
