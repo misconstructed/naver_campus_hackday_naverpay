@@ -13,10 +13,6 @@ public class UserVO {
         this.state = state;
     }
 
-    public UserVO(Object object){
-
-    }
-
     public String getId() {
         return id;
     }

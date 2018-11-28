@@ -45,22 +45,6 @@ public class ReducedDataVO {
         adMinPayment = 0;
     }
 
-    public ReducedDataVO(String date, String branchName, String productName, int count,
-                         int maxPayment, int minPayment, int totalPayment,
-                         int adCount, int adTotalPayment, int adMaxPayment, int adMinPayment) {
-        this.date = date;
-        this.branchName = branchName;
-        this.productName = productName;
-        this.count = count;
-        this.maxPayment = maxPayment;
-        this.minPayment = minPayment;
-        this.totalPayment = totalPayment;
-        this.adCount = adCount;
-        this.adTotalPayment = adTotalPayment;
-        this.adMaxPayment = adMaxPayment;
-        this.adMinPayment = adMinPayment;
-    }
-
     public void set(DataVO data) {
         if(data.getPaymentState().equals("결제")) {
             increaseCount();
