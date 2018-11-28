@@ -4,7 +4,6 @@ import com.naver_pay.VO.AnalysisVO;
 import com.naver_pay.VO.ReducedDataVO;
 import com.naver_pay.VO.UserVO;
 import com.naver_pay.mapper.DataMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -13,22 +12,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
 import java.util.ArrayList;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 @EnableAutoConfiguration
-public class BranchController {
+public class ProductController {
 
     @Autowired
     DataMapper dataMapper;
 
-    @RequestMapping(value = "/branch", method = GET)
+    @RequestMapping(value = "/product", method = GET)
     public @ResponseBody ModelAndView branchMain(HttpServletRequest request,
                                                  @RequestParam(value = "branchName", required = false) String branchName,
                                                  @RequestParam(value = "year", required = false) String year,
@@ -45,18 +42,18 @@ public class BranchController {
             return new ModelAndView("redirect:/main");
 
         } else if(userVO.getState() == 0) {
-            modelAndView = new ModelAndView("branchUser");
+            modelAndView = new ModelAndView("productUser");
             String date = null;
             try {
+                ArrayList<String> branchList = dataMapper.getBranchList();
                 if(year == null) {
-                    System.out.println(branchName);
                     if(branchName == null || branchName.equals("default")) {
-                        ArrayList<ReducedDataVO> list = dataMapper.getTotal();
+                        ArrayList<ReducedDataVO> list = dataMapper.getTotalProduct();
                         changeDate(list);
                         System.out.println("daily all branch : "+ list.size());
                         analysisVO = new AnalysisVO(list);
                     } else {
-                        ArrayList<ReducedDataVO> list = dataMapper.getFiltered(branchName);
+                        ArrayList<ReducedDataVO> list = dataMapper.getFilteredProduct(branchName);
                         changeDate(list);
                         System.out.println("daily "+branchName+" : "+list.size());
                         analysisVO = new AnalysisVO(list);
@@ -65,11 +62,11 @@ public class BranchController {
                 } else if(month == null) {
                     date = year;
                     if(branchName == null || branchName.equals("default")) {
-                        ArrayList<ReducedDataVO> list = dataMapper.getYearly(date);
+                        ArrayList<ReducedDataVO> list = dataMapper.getYearlyProduct(date);
                         System.out.println("yearly "+date+" : "+list.size());
                         analysisVO = new AnalysisVO(list);
                     } else {
-                        ArrayList<ReducedDataVO> list = dataMapper.getYearlyBranchFiltered(branchName, date);
+                        ArrayList<ReducedDataVO> list = dataMapper.getYearlyBranchFilteredProduct(branchName, date);
                         System.out.println("yearly "+date+" "+branchName+" : "+ list.size());
                         analysisVO = new AnalysisVO(list);
                     }
@@ -77,11 +74,11 @@ public class BranchController {
                 } else if(day == null) {
                     date = year+"."+month;
                     if(branchName == null || branchName.equals("default")) {
-                        ArrayList<ReducedDataVO> list = dataMapper.getMonthly(date);
+                        ArrayList<ReducedDataVO> list = dataMapper.getMonthlyProduct(date);
                         System.out.println("monthly "+date+" : "+list.size());
                         analysisVO = new AnalysisVO(list);
                     } else {
-                        ArrayList<ReducedDataVO> list = dataMapper.getMonthlyBranchFiltered(branchName, date);
+                        ArrayList<ReducedDataVO> list = dataMapper.getMonthlyBranchFilteredProduct(branchName, date);
                         System.out.println("yearly "+date+" "+branchName+" : "+ list.size());
                         analysisVO = new AnalysisVO(list);
                     }
@@ -98,6 +95,8 @@ public class BranchController {
                         analysisVO = new AnalysisVO(list);
                     }
                 }
+
+                modelAndView.addObject("branchList", branchList);
             } catch (Exception e) {
                 e.printStackTrace();
             }

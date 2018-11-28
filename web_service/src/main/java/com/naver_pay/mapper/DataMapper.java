@@ -61,6 +61,30 @@ public interface DataMapper {
     public ArrayList<ReducedDataVO> getYearlyBranchFiltered(@Param("branchName") String branchName,
                                                             @Param("date") String date) throws Exception;
 
+    @Select("select * from total order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getTotalProduct() throws Exception;
 
+    @Select("select * from total where branchName = \"${branchName}\" order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getFilteredProduct(@Param("branchName") String branchName) throws Exception;
+
+
+    @Select("select * from yearly where date = \"${date}\" order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getYearlyProduct(@Param("date") String date) throws Exception;
+
+    @Select("select * from yearly where branchName = \"${branchName}\" and " +
+            "date = \"${date}\" order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getYearlyBranchFilteredProduct(@Param("branchName") String branchName,
+                                                            @Param("date") String date) throws Exception;
+
+    @Select("select * from yearly where date = \"${date}\" order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getMonthlyProduct(@Param("date") String date) throws Exception;
+
+    @Select("select * from yearly where branchName = \"${branchName}\" and " +
+            "date = \"${date}\" order by totalPayment desc limit 5")
+    public ArrayList<ReducedDataVO> getMonthlyBranchFilteredProduct(@Param("branchName") String branchName,
+                                                                   @Param("date") String date) throws Exception;
+
+    @Select("select distinct branchName from total order by branchName")
+    public ArrayList<String> getBranchList() throws Exception;
 }
 
