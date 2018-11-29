@@ -119,18 +119,22 @@ public class ReducedDataVO {
                 increasePointCount();
                 checkMaxPointPayment(data.getPointAmount());
                 checkMinPointPayment(data.getPointAmount());
+                addPointPayment(data.getPointAmount());
             }
             //할부를 한 경우
             if(data.getInstallmentMonth() != 0) {
                 increaseInstallmentCount();
                 checkMaxInstallment(data.getInstallmentMonth());
                 checkMinInstallment(data.getInstallmentMonth());
+                addTotalInstallment(data.getInstallmentMonth());
+
             }
             //적립 포인트가 존재하는 경우
             if(data.getSavedPoint() != 0) {
                 increaseSavedPointCount();
                 checkMaxSavedPoint(data.getSavedPoint());
                 checkMinSavedPoint(data.getSavedPoint());
+                addTotalSavedPoint(data.getSavedPoint());
             }
 
             //광고id가 존재하는 경우
@@ -153,10 +157,6 @@ public class ReducedDataVO {
             //포인트를 사용한 경우
             if(data.getPointAmount() != 0) {
                 subPointPayment(data.getPointAmount());
-            }
-            //할부를 한 경우
-            if(data.getInstallmentMonth() != 0) {
-                subTotalInstallment(data.getInstallmentMonth());
             }
             //적립 포인트가 존재하는 경우
             if(data.getSavedPoint() != 0) {
