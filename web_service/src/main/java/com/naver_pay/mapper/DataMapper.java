@@ -13,22 +13,34 @@ public interface DataMapper {
 
     @Insert("insert into daily values (\"${date}\", \"${branchName}\", \"${count}\", \"${maxPayment}\"," +
             "\"${minPayment}\", \"${totalPayment}\", \"${adCount}\", \"${adTotalPayment}\"," +
-            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\")")
+            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\" , \"${male}\" , \"${female}\"," +
+            "\"${pointCount}\", \"${maxPointPayment}\", \"${minPointPayment}\", \"${totalPointPayment}\", " +
+            "\"${installmentCount}\", \"${maxinstallment}\", \"${minInstallment}\", \"${totalInstallment}\", " +
+            "\"${savedPoint}\", , \"${maxSavedPoint}\", \"${minSavedPoint}\", \"${totalSavedPoint}\")")
     public boolean insertDay(ReducedDataVO data) throws Exception;
 
     @Insert("insert into monthly values (\"${date}\", \"${branchName}\", \"${count}\", \"${maxPayment}\"," +
             "\"${minPayment}\", \"${totalPayment}\", \"${adCount}\", \"${adTotalPayment}\"," +
-            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\")")
+            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\", \"${male}\" , \"${female}\"," +
+            "\"${pointCount}\", \"${maxPointPayment}\", \"${minPointPayment}\", \"${totalPointPayment}\", " +
+            "\"${installmentCount}\", \"${maxinstallment}\", \"${minInstallment}\", \"${totalInstallment}\", " +
+            "\"${savedPoint}\", , \"${maxSavedPoint}\", \"${minSavedPoint}\", \"${totalSavedPoint}\")")
     public boolean insertMonth(ReducedDataVO data) throws Exception;
 
     @Insert("insert into yearly values (\"${date}\", \"${branchName}\", \"${count}\", \"${maxPayment}\"," +
             "\"${minPayment}\", \"${totalPayment}\", \"${adCount}\", \"${adTotalPayment}\"," +
-            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\")")
+            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\", \"${male}\" , \"${female}\"," +
+            "\"${pointCount}\", \"${maxPointPayment}\", \"${minPointPayment}\", \"${totalPointPayment}\", " +
+            "\"${installmentCount}\", \"${maxinstallment}\", \"${minInstallment}\", \"${totalInstallment}\", " +
+            "\"${savedPoint}\", , \"${maxSavedPoint}\", \"${minSavedPoint}\", \"${totalSavedPoint}\")")
     public boolean insertYear(ReducedDataVO data) throws Exception;
 
     @Insert("insert into total values (\"${date}\", \"${branchName}\", \"${count}\", \"${maxPayment}\"," +
             "\"${minPayment}\", \"${totalPayment}\", \"${adCount}\", \"${adTotalPayment}\"," +
-            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\")")
+            "\"${adMaxPayment}\", \"${adMinPayment}\", \"${productName}\", \"${male}\" , \"${female}\"," +
+            "\"${pointCount}\", \"${maxPointPayment}\", \"${minPointPayment}\", \"${totalPointPayment}\", " +
+            "\"${installmentCount}\", \"${maxinstallment}\", \"${minInstallment}\", \"${totalInstallment}\", " +
+            "\"${savedPoint}\", , \"${maxSavedPoint}\", \"${minSavedPoint}\", \"${totalSavedPoint}\")")
     public boolean insertTotal(ReducedDataVO data) throws Exception;
 
     @Select("select * from total order by branchName, totalPayment desc")
