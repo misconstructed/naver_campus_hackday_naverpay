@@ -1,5 +1,6 @@
 package com.naver_pay.mapper;
 
+import com.naver_pay.VO.DataVO;
 import com.naver_pay.VO.ReducedDataVO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -10,6 +11,13 @@ import java.util.ArrayList;
 
 @Mapper
 public interface DataMapper {
+
+    @Insert("insert into original values (\"${date}\", \"${id}\", \"${userId}\", \"${userBirth}\"," +
+            "\"${userSex}\", \"${branchName}\", \"${productName}\", \"${productType}\"," +
+            "\"${paymentState}\", \"${paymentType}\", \"${mainPaymentType}\" , \"${paymentAmount}\" ," +
+            "\"${mainPaymentAmount}\", \"${pointAmount}\", \"${receiptNumber}\", \"${installmentMonth}\", " +
+            "\"${adId}\", \"${savedPoint}\")")
+    public boolean insertOriginal(DataVO data) throws Exception;
 
     @Insert("insert into daily values (\"${date}\", \"${branchName}\", \"${count}\", \"${maxPayment}\"," +
             "\"${minPayment}\", \"${totalPayment}\", \"${adCount}\", \"${adTotalPayment}\"," +
