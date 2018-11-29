@@ -35,6 +35,7 @@ public class MainWebController {
     private HashMap<String, ReducedDataVO> day;
     private HashMap<String, ReducedDataVO> year;
     private AnalysisVO analysisVO;
+    private ArrayList<DataVO> list;
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public @ResponseBody ModelAndView main(HttpServletRequest request,
@@ -131,8 +132,7 @@ public class MainWebController {
         public void run() {
             super.run();
             reader = new CsvReader("static/csv/data.csv");
-            ArrayList<DataVO> list = reader.getList();
-
+            list = reader.getList();
             total = reader.getMap();
             day = reader.getDay();
             month = reader.getMonth();
@@ -144,11 +144,31 @@ public class MainWebController {
             System.out.println("reduced month size : "+ month.size());
             System.out.println("reduced day size : "+ day.size());
 
+            //원본 데이터 저장
+            saveOriginal();
+
             //데이터 디비에 저장
             saveData(day, "day");
             saveData(month, "month");
             saveData(year, "year");
             saveData(total, "total");
+        }
+    }
+
+    private void saveOriginal() {
+        DataVO data;
+
+        Iterator<DataVO> iterator = list.iterator();
+        while(iterator.hasNext()) {
+           data = iterator.next();
+            try {
+                dataMapper.insertOriginal(data);
+            } catch (DuplicateKeyException e) {
+                System.out.println("duplicate input");
+                break;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }
