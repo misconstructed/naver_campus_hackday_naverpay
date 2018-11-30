@@ -1,10 +1,5 @@
 package com.naver_pay.VO;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class DataVO {
     private String date;
     private String id;
@@ -59,10 +54,6 @@ public class DataVO {
                   String paymentAmount, String mainPaymentAmount, String pointAmount, String receiptNumber,
                   String installmentMonth, String adId, String savedPoint) {
 
-        //System.out.println(date);
-        //DateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-        //DateFormat format = new SimpleDateFormat("yyyyy.MM.dd HH:mm:ss");
-       //this.date = format.parse(date);
         this.date = date;
         this.id = id;
         this.userId = userId;
@@ -75,17 +66,17 @@ public class DataVO {
         this.paymentType = paymentType;
         this.mainPaymentType = mainPaymentType;
 
-        if(paymentAmount.equals(""))
+        if (paymentAmount.equals(""))
             this.paymentAmount = 0;
         else
             this.paymentAmount = Integer.parseInt(paymentAmount);
 
-        if(mainPaymentAmount.equals(""))
+        if (mainPaymentAmount.equals(""))
             this.mainPaymentAmount = 0;
         else
             this.mainPaymentAmount = Integer.parseInt(mainPaymentAmount);
 
-        if(pointAmount.equals(""))
+        if (pointAmount.equals(""))
             this.pointAmount = 0;
         else
             this.pointAmount = Integer.parseInt(pointAmount);
@@ -93,14 +84,14 @@ public class DataVO {
 
         this.receiptNumber = receiptNumber;
 
-        if(installmentMonth.equals(""))
+        if (installmentMonth.equals(""))
             this.installmentMonth = 0;
         else
             this.installmentMonth = Integer.parseInt(installmentMonth);
 
         this.adId = adId;
 
-        if(savedPoint.equals(""))
+        if (savedPoint.equals(""))
             this.savedPoint = 0;
         else
             this.savedPoint = Integer.parseInt(savedPoint);

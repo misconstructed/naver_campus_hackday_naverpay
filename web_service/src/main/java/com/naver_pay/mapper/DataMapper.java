@@ -1,6 +1,7 @@
 package com.naver_pay.mapper;
 
 import com.naver_pay.VO.DataVO;
+import com.naver_pay.VO.GraphVO;
 import com.naver_pay.VO.ReducedDataVO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -106,5 +107,28 @@ public interface DataMapper {
 
     @Select("select distinct branchName from total order by branchName")
     public ArrayList<String> getBranchList() throws Exception;
+
+    @Select("select date, sum(totalPayment) from yearly group by date order by date asc")
+    public ArrayList<GraphVO> getYearlyGraph() throws Exception;
+
+    @Select("select date, sum(totalPayment) from yearly where branchName = \"${branchName}\" group by date order by date asc")
+    public ArrayList<GraphVO> getFilteredYearlyGraph(@Param("branchName") String branchName) throws Exception;
+
+
+    @Select("select date, sum(totalPayment) from monthly where date like \"${date}%\" group by date order by date asc")
+    public ArrayList<GraphVO> getMonthlyGraph(@Param("date") String date) throws Exception;
+
+    @Select("select date, sum(totalPayment) from daily where branchName = \"${branchName}\"" +
+            " and date like \"${date}%\" group by date order by date asc")
+    public ArrayList<GraphVO> getMonthlyFilteredGraph(@Param("branchName") String branchName,
+                                                      @Param("date") String date) throws Exception;
+
+    @Select("select date, sum(totalPayment) from monthly where date like \"${date}%\" group by date order by date asc")
+    public ArrayList<GraphVO> getDailyGraph(@Param("date") String date) throws Exception;
+
+    @Select("select date, sum(totalPayment) from daily where branchName = \"${branchName}\"" +
+            " and date like \"${date}%\" group by date order by date asc")
+    public ArrayList<GraphVO> getDailyFilteredGraph(@Param("branchName") String branchName,
+                                                      @Param("date") String date) throws Exception;
 }
 

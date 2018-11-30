@@ -9,7 +9,8 @@ public class AnalysisVO {
     private ArrayList<String> branchList;
     private ArrayList<String> dateList;
 
-    public AnalysisVO() { }
+    public AnalysisVO() {
+    }
 
     public AnalysisVO(ArrayList<ReducedDataVO> list) {
         this.list = list;
@@ -64,9 +65,8 @@ public class AnalysisVO {
 
     private void makeTotal() {
         int i;
-        ReducedDataVO data;
-        for(i = 0; i < list.size(); i++) {
-            data = list.get(i);
+        for (i = 0; i < list.size(); i++) {
+            ReducedDataVO data = list.get(i);
             total += data.getTotalPayment();
             adTotal += data.getAdTotalPayment();
         }
@@ -74,12 +74,11 @@ public class AnalysisVO {
 
     private void makeList() {
         int i;
-        ReducedDataVO data;
-        for(i = 0; i < list.size(); i++) {
-            data = list.get(i);
-            if(!branchList.contains(data.getBranchName()))
+        for (i = 0; i < list.size(); i++) {
+            ReducedDataVO data = list.get(i);
+            if (!branchList.contains(data.getBranchName()))
                 branchList.add(data.getBranchName());
-            if(!dateList.contains(data.getDate()))
+            if (!dateList.contains(data.getDate()))
                 dateList.add(data.getDate());
 
         }

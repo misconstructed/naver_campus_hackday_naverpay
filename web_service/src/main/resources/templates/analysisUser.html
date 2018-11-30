@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:jsp="http://java.sun.com/JSP/Page">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/js/button.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="/css/general_css.css">
+
+
+<div class="topnav">
+    <a href="/main">Overall</a>
+    <a href="/branch">Branch</a>
+    <a href="/product">Products</a>
+    <a class="active" href="/overall">Analysis</a>
+
+    <div class="topnav-right">
+        <a href="">Profile</a>
+    </div>
+</div>
+
+<bodys>
+    <div class="card">
+        <div class="card-header">
+            <b>변화 추이</b>
+        </div>
+        <div class="card-body">
+            <div style="margin:1%;">
+                <form class="form">
+                    <label>조회할 지점명을 선택하세요 </label>
+
+                    <select class="form-control form-control-sm" style="width:20%; margin-right: 10px" name="branch" id="branchSelect">
+                        <option value="default">전체 선택</option>
+                        <th:block th:each="data : ${branchList}" align="center">
+                            <option th:value="${data}" th:id="${data}" th:text="${data}">branchName</option>
+                        </th:block>
+                    </select>
+
+                    <input type="number" id="year" placeholder="Enter year" name="year">
+                    <input type="number" id="month" placeholder="Enter month" name="month">
+
+                    <button type="button" onclick="searchGraph()">검색</button>
+                </form>
+                <div style="margin: 10px; padding: 10px">
+                        <table style="width: 100%; margin-bottom: 10px" id="table"
+                               class="table-bordered table-striped table-condensed cf">
+                            <thead class="cf" align="center">
+                            <tr>
+                                <td width="50%" title="통계 날짜"><h4>
+                                    <b>날짜</b>
+                                </h4></td>
+                                <td width="50%"><h4>
+                                    <b>지점명</b>
+                                </h4></td>
+                            </tr>
+                            </thead>
+                            <tbody align="center">
+                            <tr th:each="data : ${data}">
+                                <td th:text="${data.date}"><h5>date</h5></td>
+                                <td th:text="${data.amount}"><h5>amount</h5></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</bodys>
+
+
+<script>
+    function searchGraph() {
+        var branchSelect = document.getElementById("branchSelect");
+        var branchName = branchSelect.options[branchSelect.selectedIndex].value;
+        var year = document.getElementById("year").value;
+        var month = document.getElementById("month").value;
+
+        if(month.length == 1)
+            month = "0" + month;
+        if(year == "") {
+            $.ajax({
+                url : "/overall",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName
+                },
+                success : function (data){
+
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        } else if(month == "") {
+            $.ajax({
+                url : "/overall",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName,
+                    year : year
+                },
+                success : function (data){
+                    console.log(data);
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        } else {
+            $.ajax({
+                url : "/overall",
+                type : "GET",
+                contentType: "application/json",
+                data : {
+                    branchName : branchName,
+                    year : year,
+                    month : month
+                },
+                success : function (data){
+                    //console.log(data.branchList);
+                },
+                error : function(data, textStatus, errorThrown) {
+                    alert("error");
+                    console.log(data);
+                }
+            });
+        }
+    }
+</script>
+
+</html>
