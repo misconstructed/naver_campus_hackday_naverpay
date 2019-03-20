@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:jsp="http://java.sun.com/JSP/Page">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/js/button.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="/css/general_css.css">
+
+<div class="topnav">
+    <a href="/main">Overall</a>
+    <a class="active" href="/branch">Branch</a>
+    <a href="/product">Products</a>
+    <a href="/overall">Analysis</a>
+
+    <div class="topnav-right">
+        <a href="">Profile</a>
+    </div>
+</div>
+
+<bodys>
+    <div class="card">
+        <div class="card-header">
+            <b>가맹점별 품목 결제금액</b>
+        </div>
+        <div class="card-body">
+            <div style="margin:1%;">
+                <form class="form">
+                    <label>조회할 지점명을 선택하세요 </label>
+
+                        <select class="form-control form-control-sm" style="width:20%; margin-right: 10px" name="branch" id="branchSelect">
+                            <option value="default">전체 선택</option>
+                            <th:block th:each="element : ${data}" align="center">
+                                <th:block th:each="data : ${element.branchList}">
+                                    <option th:value="${data}" th:id="${data}" th:text="${data}">branchName</option>
+                                </th:block>
+                            </th:block>
+                        </select>
+
+                    <input type="number" id="year" placeholder="Enter year" name="year">
+                    <input type="number" id="month" placeholder="Enter month" name="month">
+                    <input type="number" id="day" placeholder="Enter day" name="day">
+
+                    <button type="button" onclick="searchBranch()">검색</button>
+
+                </form>
+                <div style="margin: 10px; padding: 10px">
+                    <table style="width: 100%; margin-bottom: 10px" id="table"
+                           class="table-bordered table-striped table-condensed cf">
+                        <thead class="cf" align="center">
+                            <tr>
+                                <td width="10%"><h4>
+                                    <b>날짜</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>지점명</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>제품명</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>결제금액</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>포인트</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>포인트 비율 (%)</b>
+                                </h4></td>
+                                <td width="15%"><h4>
+                                    <b>전체 비율 (%)</b>
+                                </h4></td>
+                            </tr>
+                        </thead>
+                        <tbody th:each="element : ${data}" align="center">
+                            <tr th:each="data : ${element.list}">
+                                <td th:text="${data.date}"><h5>Date</h5></td>
+                                <td th:text="${data.branchName}"><h5>Branch Name</h5></td>
+                                <td th:text="${data.productName}"><h5>Product Name</h5></td>
+                                <td th:text="${data.totalPayment}"><h5>Total payment</h5></td>
+                                <td th:text="${data.adTotalPayment}"><h5>ad total payment</h5></td>
+                                <td th:text="${data.adTotalPayment} / ${data.totalPayment} * 100"><h5>ad precentage</h5></td>
+                                <td th:text="${data.totalPayment} / ${element.total} * 100"><h5>total percentage</h5></td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+
+                                <td ><h5>전체 결제금액</h5></td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0" th:text="${element.total}">total payment</td>
+
+                                <td ><h5>전체 포인트 구매액</h5></td>
+                                <td th:if="${element.adTotal} == 0" >-</td>
+                                <td th:unless="${element.adTotal} == 0"th:text="${element.adTotal}"><h5><b>total ad payment</b></h5></td>
+
+                                <td ><h5>포인트 구매 비율(%)</h5></td>
+                                <td th:if="${element.total} == 0" >-</td>
+                                <td th:unless="${element.total} == 0"th:text="${element.adTotal} / ${element.total} * 100"><h5><b>total payment</b></h5></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</bodys>
+
+</html>
